@@ -1,0 +1,1 @@
+Find sql files for tables used or use screen shots in sql folder
