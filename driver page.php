@@ -33,7 +33,9 @@
         <h1>Customers</h1>
         <div id="id01"></div>
         <div id="id02"></div>
-        <script>
+    </body>
+
+    <script>
         var xmlhttp = new XMLHttpRequest();
         var url = "seats_mysql.php";
 
@@ -52,24 +54,23 @@
             var booked_seats = 0;
 
             for(i = 0; i < arr.length; i++) {
-                out += "<tr><td>" + 
-                arr[i].SeatNumber +
-                "</td><td>" +
-                arr[i].SeatStatus +
-                "</td></tr>";
-                
+                out += "<tr><td>" +
+                    arr[i].SeatNumber +
+                    "</td><td>" +
+                    arr[i].SeatStatus +
+                    "</td></tr>";
+
                 if(arr[i].SeatStatus !== "NA") {
-                    booked_seats += 1; 
-                }   
+                    booked_seats += 1;
+                }
             }
             var booked_out = "<p><b>" + booked_seats + " / 10 </b> Seats are booked</p>";
-            
+
             out += "</table>";
             document.getElementById("id01").innerHTML = out;
             document.getElementById("id02").innerHTML = booked_out;
-            
-        }
-        </script>
 
-    </body>
+        }
+    </script>
+
 </html>

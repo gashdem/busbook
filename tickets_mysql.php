@@ -4,7 +4,7 @@ session_start();
 if(isset($_POST['VerifyName'])){
     
     $_SESSION['testvalue'] = $_POST['name_txtbox'];
-    $con = new mysqli("localhost", "root", "", "busbook");
+    $con = new mysqli("localhost", "root", "chebon01", "busbook");
 
 $value = $_SESSION['testvalue'];
 
